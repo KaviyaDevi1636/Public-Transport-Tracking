@@ -70,38 +70,65 @@ Exit
 ## System Architecture
 
 User
-  │
-  ▼
-Main.java (User Interface / Menu)
-  │
-  ▼
-TrackingSystem.java (System Logic)
-  │
-  ├── Bus.java (Bus Details)
-  │
-  └── Location.java (Latitude & Longitude)
-  │
-  ▼
-Console Output (Bus Status, Location, Arrival Time)
+  |
+  v
++-------------------+
+|      Main.java    |
+|  (User Interface) |
++-------------------+
+          |
+          v
++----------------------+
+|  TrackingSystem.java |
+|    (System Logic)    |
++----------------------+
+      |            |
+      v            v
++-----------+   +-------------+
+|  Bus.java |   | Location.java|
+| Bus Data  |   | Lat / Long   |
++-----------+   +-------------+
+          |
+          v
++-----------------------+
+|     Console Output    |
+| Bus Status & Arrival  |
++-----------------------+
 
 ## System Flowchart
 
-Start
-  │
-  ▼
-Display Menu
-  │
-  ▼
-User Selects Option
-  │
-  ├── View All Buses → Display Bus Details
-  │
-  ├── Track Bus by Number → Search Bus → Display Location & Arrival Time
-  │
-  └── Exit Program
-  │
-  ▼
-End
+          Start
+            |
+            v
+   +--------------------+
+   |   Display Menu     |
+   +--------------------+
+              |
+              v
+    +--------------------+
+    |  User Selects Menu |
+    +--------------------+
+               |
+               v
+   +------------------------------+
+   | 1. View All Buses            |
+   | → Display Bus Details        |
+   +------------------------------+
+                 |
+                 v
+   +------------------------------+
+   | 2. Track Bus by Number       |
+   | → Search Bus                 |
+   | → Show Location & Arrival    |
+   +------------------------------+
+                 |
+                 v
+   +------------------------------+
+   | 3. Exit Program              |
+   +------------------------------+
+                 |
+                 v
+               End
 
 ## Sample Output
 

@@ -67,5 +67,65 @@ Exit
 
 ---
 
+## System Architecture
+
+User
+  │
+  ▼
+Main.java (User Interface / Menu)
+  │
+  ▼
+TrackingSystem.java (System Logic)
+  │
+  ├── Bus.java (Bus Details)
+  │
+  └── Location.java (Latitude & Longitude)
+  │
+  ▼
+Console Output (Bus Status, Location, Arrival Time)
+
+## System Flowchart
+
+Start
+  │
+  ▼
+Display Menu
+  │
+  ▼
+User Selects Option
+  │
+  ├── View All Buses → Display Bus Details
+  │
+  ├── Track Bus by Number → Search Bus → Display Location & Arrival Time
+  │
+  └── Exit Program
+  │
+  ▼
+End
+
+## Sample Output
+
+```
+--- Public Transport Tracking System ---
+
+1. View All Buses
+2. Track Bus by Number
+3. Exit
+
+Enter choice: 1
+
+Bus Number: B101
+Route: Central Bus Stand
+Status: On Time
+Arrival Time: 10 minutes
+Location: 10.92 , 78.08
+
+Bus Number: B102
+Route: Railway Station
+Status: Delayed
+Arrival Time: 20 minutes
+Location: 10.93 , 78.10
+```
+
 ## Author
 Kaviya Devi S

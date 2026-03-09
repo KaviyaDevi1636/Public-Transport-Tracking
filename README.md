@@ -27,6 +27,7 @@ This project demonstrates basic concepts of Object-Oriented Programming (OOP) in
 
 ## Project Structure
 
+```
 Real-Time-Public-Transport-Tracking-System
 │
 ├── Main.java           - Entry point of the program
@@ -34,7 +35,7 @@ Real-Time-Public-Transport-Tracking-System
 ├── Location.java       - Stores latitude and longitude
 ├── TrackingSystem.java - Handles tracking logic
 └── README.md           - Project documentation
-
+```
 ---
 
 ## How the System Works

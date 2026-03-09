@@ -69,24 +69,27 @@ Exit
 
 ## System Architecture
 
+## System Architecture
+
+```
 User
   |
   v
 +-------------------+
 |      Main.java    |
-|  (User Interface) |
+|   User Interface  |
 +-------------------+
           |
           v
 +----------------------+
 |  TrackingSystem.java |
-|    (System Logic)    |
+|     System Logic     |
 +----------------------+
       |            |
       v            v
 +-----------+   +-------------+
 |  Bus.java |   | Location.java|
-| Bus Data  |   | Lat / Long   |
+|  Bus Data |   | Lat / Long   |
 +-----------+   +-------------+
           |
           v
@@ -94,9 +97,10 @@ User
 |     Console Output    |
 | Bus Status & Arrival  |
 +-----------------------+
+```
 
 ## System Flowchart
-
+```
           Start
             |
             v
@@ -129,7 +133,7 @@ User
                  |
                  v
                End
-
+```
 ## Sample Output
 
 ```

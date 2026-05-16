@@ -1,4 +1,5 @@
 # Real Time Public Transport Tracking System for Small Cities
+[![Run on Replit](https://replit.com/badge/github/KaviyaDevi1636/Public-Transport-Tracking)](https://replit.com/github/KaviyaDevi1636/Public-Transport-Tracking)
 
 ## Overview
 The Real Time Public Transport Tracking System is a Java-based simulation project designed to demonstrate how public transport vehicles such as buses can be monitored and tracked in small cities. The system allows users to view available buses, track a specific bus, and check its current status and estimated arrival time.

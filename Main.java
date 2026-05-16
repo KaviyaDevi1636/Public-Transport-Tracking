@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Main {
 
@@ -7,7 +8,7 @@ public class Main {
         TrackingSystem system = new TrackingSystem();
         Scanner sc = new Scanner(System.in);
 
-        int choice;
+        int choice = 0;
 
         do {
             System.out.println("\n--- Public Transport Tracking System ---");
@@ -16,7 +17,14 @@ public class Main {
             System.out.println("3. Exit");
             System.out.print("Enter choice: ");
 
-            choice = sc.nextInt();
+            try {
+                choice = sc.nextInt();
+                sc.nextLine(); // consume newline character
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input! Please enter a valid number (1-3).");
+                sc.nextLine(); // clear the invalid input from scanner
+                continue; // skip the rest of the loop and show the menu again
+            }
 
             switch(choice) {
 
@@ -25,8 +33,8 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.print("Enter Bus Number: ");
-                    String busNo = sc.next();
+                    System.out.print("Enter Bus Number (e.g. B101): ");
+                    String busNo = sc.nextLine();
                     system.trackBus(busNo);
                     break;
 
@@ -35,7 +43,7 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("Invalid choice");
+                    System.out.println("Invalid choice. Please select 1, 2, or 3.");
             }
 
         } while(choice != 3);
